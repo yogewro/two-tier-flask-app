@@ -45,6 +45,22 @@ pipeline{
             }
             
         }
+        post{
+            sucess{
+                emailtext(
+                    subject:"Build Successful",
+                    body:"good news",
+                    to:"yogewro@gmail.com",
+                )
+            }
+            failure{
+                emailtext(
+                    subject:"Build failed",
+                    body:"Try Again ,Kr##",
+                    to:"yogewro@gmail.com",
+                )
+            }
+        }
         
     }
 }
