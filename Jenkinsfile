@@ -47,18 +47,16 @@ pipeline{
         }
         post("Notification"){
             sucess{
-            emailtext(
+            emailtext body :"good news",
                     subject:"Build Successful",
-                    body:"good news",
                     to:"yogewro@gmail.com",
-                )
+                
             }
             failure{
-            emailtext(
+            emailtext body :"Try Again ",
                     subject:"Build failed",
-                    body:"Try Again ,Kr##",
                     to:"yogewro@gmail.com",
-                )
+                
             }
         }
         
