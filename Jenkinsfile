@@ -51,7 +51,7 @@ post{
     success {
             script {
                 emailext from: 'yogewro@gmail.com',
-                subject: "Demo Pipeline Build Pass",
+                subject: "Demo 5G Pipeline Build Pass",
                 body:"Demo Build Done",
             to: 'yogewro@gmail.com',
             mimeType: 'text/html'
@@ -60,7 +60,7 @@ post{
     failure {
             script {
                 emailext from: 'trainwithshubham@gmail.com',
-                subject: "Wanderlust Application build failed - '${currentBuild.result}'",
+                subject: "Demo 5G Build Failed",
                 body: "Build PhatGayi",
             to: 'yogewro@gmail.com',
             mimeType: 'text/html'
