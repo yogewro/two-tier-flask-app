@@ -61,7 +61,7 @@ pipeline{
                         subject :"demo build Failed",
                         body:"Build failed",
                     to:"yogewroclaw@gmail.com",
-                    mimeType: 'test/html
+                    mimeType: 'test/html'
            
                 }
             }
