@@ -48,14 +48,21 @@ pipeline{
         post("Notification"){
             sucess{
                 script{
-            emailtext body :"good news",
-                    subject:"Build Successful",  
-                }
+                    emailtext from : "yogewro@gmail.com",
+                        subject :"demo build has been done-5G layer UP",
+                        body:"Build Done",
+                    to:"yogewroclaw@gmail.com",
+                    mimeType: 'test/html'                          
+                                           }
             }
             failure{
                 script{
-            emailtext body :"Try Again ",
-                    subject:"Build failed",
+                    emailtext from : "yogewro@gmail.com",
+                        subject :"demo build Failed",
+                        body:"Build failed",
+                    to:"yogewroclaw@gmail.com",
+                    mimeType: 'test/html
+           
                 }
             }
         }
