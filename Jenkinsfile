@@ -33,7 +33,7 @@ pipeline{
                 )]){
                     
                  "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-                s "docker image tag two-tier-flask-app ${env.dockerHubUser}/two-tier-flask-app:latest"
+                sh "docker image tag two-tier-flask-app ${env.dockerHubUser}/two-tier-flask-app:latest"
                 sh "docker push ${env.dockerHubUser}/two-tier-flask-app:latest"
                 }
             }
