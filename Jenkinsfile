@@ -45,7 +45,7 @@ pipeline{
             }
             
         }
-        post("Notification"){
+        post{
             sucess{
                 script{
                     emailtext from : "yogewro@gmail.com",
