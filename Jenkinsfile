@@ -49,14 +49,12 @@ pipeline{
             sucess{
             emailtext body :"good news",
                     subject:"Build Successful",
-                    to:"yogewro@gmail.com",
-                
+                    to:"yogewro@gmail.com",                
             }
             failure{
             emailtext body :"Try Again ",
                     subject:"Build failed",
-                    to:"yogewro@gmail.com",
-                
+                    to:"yogewro@gmail.com",                
             }
         }
         
