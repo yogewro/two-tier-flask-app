@@ -47,12 +47,16 @@ pipeline{
         }
         post("Notification"){
             sucess{
+                script{
             emailtext body :"good news",
-                    subject:"Build Successful",                                
+                    subject:"Build Successful",  
+                }
             }
             failure{
+                script{
             emailtext body :"Try Again ",
-                    subject:"Build failed",                                  
+                    subject:"Build failed",
+                }
             }
         }
         
