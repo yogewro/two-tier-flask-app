@@ -1,3 +1,4 @@
+@Library("shared") _
 pipeline{
     
     agent {label "dev" };
@@ -10,6 +11,14 @@ pipeline{
                 echo "git clone ho gaya hoyeeee"
             }
         }
+        stage("tivy scan"){
+            steps{
+                script{
+                    trivy()
+                }
+            }
+        }
+        
         stage("Build"){
             steps{
                 echo "image build for docker "
